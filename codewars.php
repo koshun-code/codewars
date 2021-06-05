@@ -1,4 +1,5 @@
 <?php
+namespace CodeWars;
 /*
 Given a string of words, you need to find the highest scoring word.
 
@@ -30,3 +31,32 @@ function iter($word)
     }
     return ord(substr($word, 0, 1)) - 96 + iter(substr($word, 1));
 }
+/*
+Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (like the name of this kata).
+
+Strings passed in will consist of only letters and spaces.
+Spaces will be included only when more than one word is present.
+*/
+function spinWords(string $str): string {
+    $words = explode(' ', $str);
+    foreach ($words as &$word) {
+        if (strlen($word) > 4) {
+            $word = strrev($word);
+        }
+    }
+    return implode(' ', $words);
+}
+
+function duplicate_encode($word)
+{
+   $res = '';
+   $word = strtolower($word);
+   $chars = str_split($word);
+   $count =  array_count_values($chars);
+   foreach ($chars as $char) {
+      $res .= $count[$char] === 1 ? '(' : ')';
+   }
+   return $res;
+}
+
+//echo duplicate_encode('receve');
