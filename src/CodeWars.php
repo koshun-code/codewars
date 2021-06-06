@@ -1,5 +1,5 @@
 <?php
-namespace CodeWars;
+namespace CodeWars\CodeWars;
 /*
 Given a string of words, you need to find the highest scoring word.
 

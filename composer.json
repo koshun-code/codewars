@@ -1,0 +1,21 @@
+{
+    "name": "usr/codewars",
+    "authors": [
+        {
+            "name": "s k",
+            "email": "s@k.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Php\\Package\\": "src",
+            "Php\\Package\\Tests\\": "tests"
+        },
+        "files": [
+            "src/CodeWars.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9"
+    }
+}
